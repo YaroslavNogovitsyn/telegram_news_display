@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+</head>
+<body>
+<h1 align="center">Новости</h1>
+<form method="post">
+    <select name="address">
+        <option value="melfm"> Мел</option>
+        <option value="habr_com"> Habr</option>
+    </select>
+    <input type="submit" value="Обновить">
+</form>
+{% for url in urls %}
+    <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-post="{{ url }}"
+        data-width="100%"></script>
+{% endfor %}
+</body>
+</html>
